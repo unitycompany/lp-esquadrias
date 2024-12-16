@@ -11,6 +11,18 @@
 <body>
 
     <style>
+        @keyframes AnimationSeta {
+            0% {
+                transform: translateY(-5px);
+            }
+
+            50% {
+                transform: translateY(70px);
+            }
+        }
+    </style>
+
+    <style>
 
         :root{
             --color--black: #000000;
@@ -69,10 +81,10 @@
 
         .home-left h1{
             
-            font-size: 40px;
+            font-size: 38px;
             font-weight: 100;
             color: var(--color--black);
-            line-height: 110%;
+            line-height: 100%;
         }
 
         .home-left h1 b{
@@ -82,7 +94,7 @@
 
         .home-left p {
             
-            font-size: 18px;
+            font-size: 16px;
             opacity: .6;
             color: var(--color--black);
             width: 80%;
@@ -93,8 +105,8 @@
 
         .home-left h6 {
             color: var(--color--green);
-            font-weight: 100;
-            font-size: 16px;
+            font-weight: 500;
+            font-size: 14px;
             margin-top: -10px;
         }
 
@@ -149,6 +161,8 @@
             font-size: 30px;
             opacity: .4;
             color: var(--color--green);
+            padding-top: 50px;
+            animation: AnimationSeta 5s linear infinite alternate-reverse;
         }
 
         .home-right{
@@ -264,7 +278,7 @@
         }
 
         .diferencas-listas ol:nth-child(1){
-            margin-left: 20px;
+            margin-left: 30px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -337,6 +351,7 @@
             color: var(--color--green);
             opacity: .4;
             margin-top: 40px;
+            animation: AnimationSeta 5s linear infinite alternate-reverse;
         }
 
         .diferencas-right{
@@ -407,7 +422,7 @@
                 </ol>
             </div>
             <div>
-                <button>
+                <button onclick="window.location.href='#home'">
                     Entrar em contato
                     <i class="bi bi-arrow-right"></i>
                 </button>
@@ -556,7 +571,7 @@
             </div>
         </div>
         <div class="vantagens-bottom">
-            <button>
+            <button onclick="window.location.href='#home'">
                 Entrar em contato
                 <i class="bi bi-arrow-right"></i>
             </button>
@@ -632,6 +647,7 @@
             color: var(--color--white);
             opacity: 1;
             margin-top: 0;
+            animation: none;
         }
 
         .produtos-left i {
@@ -639,6 +655,7 @@
             color: var(--color--green);
             opacity: .4;
             margin-top: 30px;
+            animation: AnimationSeta 5s linear infinite alternate-reverse;
         }
 
         .produtos-right{
@@ -706,7 +723,7 @@
             <span>Conheça</span>
             <h1>Nossos produtos</h1>
             <p>Falar bem diretamente sobre a qualidade superior do pvc que o que vamos vender e o porque escolher falando dos tópicos</p>
-            <button>
+            <button onclick="window.location.href='#home'">
                 Entrar em contato
                 <i class="bi bi-arrow-right"></i>
             </button>
@@ -857,6 +874,7 @@
             font-size: 32px;
             color: var(--color--green);
             opacity: .4;
+            animation: AnimationSeta 5s linear infinite alternate-reverse;
         }
     </style>
     
@@ -876,7 +894,7 @@
                     <p>Descrição...</p>
                 </div>
                 <div>
-                    <button>
+                    <button onclick="window.location.href='#home'">
                         Entrar em contato
                         <i class="bi bi-arrow-right"></i>
                     </button>
@@ -892,7 +910,7 @@
                     <p>Descrição...</p>
                 </div>
                 <div>
-                    <button>
+                    <button onclick="window.location.href='#home'">
                         Entrar em contato
                         <i class="bi bi-arrow-right"></i>
                     </button>
@@ -908,7 +926,7 @@
                     <p>Descrição...</p>
                 </div>
                 <div>
-                    <button>
+                    <button onclick="window.location.href='#home'">
                         Entrar em contato
                         <i class="bi bi-arrow-right"></i>
                     </button>
@@ -1176,7 +1194,7 @@
         </div>
     </div>
     <div class="faq-contact">
-        <button class="faq-contact-button">
+        <button class="faq-contact-button" onclick="window.location.href='#home'">
             Entrar em contato
             <i class="bi bi-arrow-up"></i>
         </button>
