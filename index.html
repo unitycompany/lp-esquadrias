@@ -21,7 +21,7 @@
             }
 
             50% {
-                transform: translateY(50px);
+                transform: translateY(20px);
             }
         }
     </style>
@@ -207,6 +207,77 @@
 
         .home-right img:hover{
             transform: skew(-1deg);
+        }
+    </style>
+
+    <style>
+        @media (max-width: 768px){
+            .home{
+                flex-direction: column-reverse;
+                height: auto;
+                padding: 10% 2.5%;
+                position: relative;
+                z-index: 1;
+            }
+
+            .home-left{
+                width: 100%;
+                position: relative;
+                margin-top: -30%;
+                z-index: 1;
+                align-items: center;
+            }
+
+            .home-left div{
+                align-items: center;
+            }
+
+            .home-left h1{
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .home-left p{
+                font-size: 16px;
+                text-align: center;
+                opacity: .4!important;
+            }
+
+            .contactForm{
+                align-items: center;
+                width: 100%;
+            }
+
+            .contactForm input{
+                width: 100%;
+            }
+
+            .contactForm button{
+                border-radius: 20px;
+            }
+
+            .home-left span{
+                text-align: center;
+                width: 100%;
+                opacity: .4;
+            }
+
+            .home-right{
+                z-index: -1;
+                top: -2%;
+                width: 100%;
+            }
+
+            .home-right img{
+                opacity: .3;
+            }
+
+            .home-left span{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     </style>
 
@@ -476,6 +547,65 @@
         }
     </style>
 
+    <style>
+
+        @media (max-width: 768px){
+            .diferencas{
+                flex-direction: column;
+                padding: 10% 2.5%;
+                height: auto;
+            }
+
+            .diferencas-left{
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+
+            .diferencas-left div:nth-child(1) span{
+                font-size: 14px;
+            }
+
+            .diferencas-left div:nth-child(1) h1{
+                font-size: 24px;
+            }
+
+            .diferencas-left div:nth-child(2) p{
+                width: 100%;
+            }
+
+            .diferencas-listas{
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .diferencas-listas ol:nth-child(1){
+                margin-left: 60px;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .diferencas-listas ol:nth-child(2){
+                margin-right: 60px;
+                align-items: flex-end;
+                width: 100%;
+            }
+
+            .diferencas-left div:nth-child(4) button{
+                border-radius: 20px;
+            }
+
+            .diferencas-left div:nth-child(5){
+                margin-top: -10px;
+            }
+
+            .diferencas-right{
+                display: none;
+            }
+        }
+
+    </style>
+
     <section class="diferencas" id="diferencas">
         <div class="diferencas-left">
             <div>
@@ -627,6 +757,39 @@
             background-color: transparent;
             border: 1px solid var(--color--green);
             color: var(--color--green);
+        }
+    </style>
+
+    <style>
+        @media (max-width: 768px){
+            .vantagens{
+                flex-direction: column;
+                padding: 10% 2.5%;
+                height: auto;
+            }
+
+            .vantagens-top span{
+                font-size: 14px;
+            }
+
+            .vantagens-top h1{
+                font-size: 24px;
+            }
+
+            .vantagens-center{
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .vantagens-card{
+                width: 100%;
+                align-items: center;
+            }
+
+            .vantagens-card div{
+                align-items: center;
+                text-align: center;
+            }
         }
     </style>
 
@@ -823,6 +986,59 @@
         }
     </style>
 
+    <style>
+        .produtos{
+            flex-direction: column;
+            padding: 10% 2.5%;
+            height: auto;
+        }
+
+        .produtos-left{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
+        .produtos-left span{
+            font-size: 14px;
+        }
+
+        .produtos-left h1{
+            font-size: 24px;
+        }
+
+        .produtos-card p {
+            text-align: center;
+            width: 100%;
+        }
+
+        .produtos-left button{
+            border-radius: 20px;
+        }
+
+        .produtos-left i{
+            margin-top: 10px;
+        }
+
+        .produtos-right{
+            width: 100%;
+        }
+
+        .produtos-card{
+            height: 15vh;
+        }
+
+        .produtos-card div span{
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .produtos-card div img{
+            width: 30%;
+            height: 30%;
+        }
+    </style>
+
     <section class="produtos" id="produtos">
         <div class="produtos-left">
             <span data-aos="fade-up-right" data-aos-delay="50">Conheça</span>
@@ -994,6 +1210,38 @@
             color: var(--color--green);
             opacity: .4;
             animation: AnimationSeta 5s linear infinite alternate-reverse;
+        }
+    </style>
+
+    <style>
+        @media(max-width: 768px){
+            .sobre{
+                padding: 10% 2.5%;
+                height: auto;
+            }
+
+            .sobre-top span{
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .sobre-top h1{
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .sobre-center{
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+
+            .sobre-card{
+                width: 100%;
+            }
+
+            .sobre-card div:nth-child(1) img{
+                width: 30px;
+            }
         }
     </style>
     
@@ -1208,6 +1456,22 @@
         border: 1px solid var(--color--green);
         color: var(--color--green);
     }
+    </style>
+
+    <style>
+        @media(max-width: 768px){
+            .faq-subtitle{
+                font-size: 14px;
+            }
+            
+            .faq-title{
+                font-size: 24PX;
+            }
+
+            .faq-content{
+                gap: 0px;
+            }
+        }
     </style>
 
     <section class="faq" id="faq">
