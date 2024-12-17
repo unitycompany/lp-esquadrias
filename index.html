@@ -200,8 +200,7 @@
         .home-right img{
             width: 100%;
             height: 95%;
-            object-fit: cover;
-            border-radius: 1000px 1000px 0 0;         
+            object-fit: contain;    
             transition: all 1s ease-in-out;
         }
 
@@ -300,7 +299,7 @@
             </div>
         </div>
         <div class="home-right" data-aos="fade-up-left" data-aos-delay="300">
-            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c15f38a5-d5c2-4e34-56ea-06e4a2225700/public" alt="foto de esquadrias">
+            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b29936b3-1bf5-43c4-fb22-28231c5f1a00/public">
         </div>
     </section>
 
@@ -691,7 +690,7 @@
         .vantagens-center{
             width: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
         }
 
@@ -701,7 +700,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 10px;
         }
 
@@ -1093,11 +1092,63 @@
 
 <!-- Fim da seção Produtos -->
 
-    <style></style>
+    <style>
 
-    <section>
-        
+        .galery{
+            width: 100%;
+            max-width: 1140px;
+            margin-bottom: 10vh!important;
+            height: 75vh;
+            transform: translateX(-50%);
+            left: 50%;
+            top: -5vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .galery img{
+            width: 30%;
+            height: 50%;
+            object-fit: cover;
+            border: 1px solid var(--color--black);
+            margin: 5px;
+            overflow: hidden;
+            transition: all .5s ease;
+        }
+
+        .galery img:hover{
+            transform: scale(1.02);
+        }
+
+    </style>
+
+    <section class="galery" id="galery">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/490722fd-2d2c-463a-7fc0-1bbf08a71200/public" loading="lazy">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/de779c54-16e5-4d6b-ddad-a2eb895e7a00/public" loading="lazy">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b4ed06f9-537e-4955-a7dc-25135a71f200/public" loading="lazy">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2d1efb00-16a6-4a7c-5c94-037dc1591c00/public" loading="lazy">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/246320ca-e53d-451d-a2a0-43ea03f98f00/public" loading="lazy">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/8252c9f4-b6d6-426c-b646-372156e54600/public" loading="lazy">
     </section>
+
+    <script>
+        const cards = document.querySelectorAll('.produtos-card > div');
+        const galeryElement = document.querySelector('#galery');
+        const offset = -100; // ajuste de -200px do topo
+    
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const y = galeryElement.getBoundingClientRect().top + window.pageYOffset + offset;
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 <!-- Fim da seção de imagens do produtos -->
 
