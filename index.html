@@ -221,7 +221,7 @@
             .home-left{
                 width: 100%;
                 position: relative;
-                margin-top: -30%;
+                margin-top: -10%;
                 z-index: 1;
                 align-items: center;
             }
@@ -1097,7 +1097,7 @@
             width: 100%;
             max-width: 1140px;
             margin-bottom: 10vh!important;
-            height: 75vh;
+            height: auto;
             transform: translateX(-50%);
             left: 50%;
             top: -5vh;
@@ -1120,6 +1120,17 @@
 
         .galery img:hover{
             transform: scale(1.02);
+        }
+
+        @media (max-width: 768px){
+            .galery{
+                top: 0;
+            }
+
+            .galery img{
+                width: 45%;
+                height: 30vh;
+            }
         }
 
     </style>
@@ -1266,7 +1277,7 @@
             opacity: .4;
             animation: AnimationSeta 5s linear infinite alternate-reverse;
         }
-    </style>
+    </styl>
 
     <style>
         @media(max-width: 768px){
