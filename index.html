@@ -900,6 +900,7 @@
             font-weight: 100;
             color: var(--color--black);
             line-height: 100%;
+            margin-bottom: 10px;
         }
 
         .produtos-left p {
@@ -1073,13 +1074,13 @@
     <section class="produtos" id="produtos">
         <div class="produtos-left">
             <span data-aos="fade-up-right" data-aos-delay="50">Conheça</span>
-            <h1 data-aos="fade-up-right" data-aos-delay="150">Nossos Produtos</h1>
-            <p data-aos="fade-up-right" data-aos-delay="200">As esquadrias de PVC oferecem qualidade superior com durabilidade incomparável, excelente isolamento térmico e acústico, eficiência energética e design moderno. Além de resistirem à corrosão e intempéries, são sustentáveis, recicláveis e demandam pouca manutenção, tornando-se a escolha ideal para quem busca conforto, economia e estética.
-            </p>
-            <button onclick="window.location.href='#home'">
+            <h1 data-aos="fade-up-right" data-aos-delay="150">Toda a Linha Ecoframe</h1>
+            <!-- <p data-aos="fade-up-right" data-aos-delay="200">As esquadrias de PVC oferecem qualidade superior com durabilidade incomparável, excelente isolamento térmico e acústico, eficiência energética e design moderno. Além de resistirem à corrosão e intempéries, são sustentáveis, recicláveis e demandam pouca manutenção, tornando-se a escolha ideal para quem busca conforto, economia e estética.
+            </p> -->
+            <!-- <button onclick="window.location.href='#home'">
                 Entrar em contato
                 <i class="bi bi-arrow-right"></i>
-            </button>
+            </button> -->
             <i class="bi bi-arrow-down"></i>
         </div>
         <div class="produtos-right">
@@ -1146,6 +1147,43 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .button-galery{
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background-color: var(--color--green);
+        cursor: pointer;
+        color: var(--color--white);
+        transition: all .2s ease;
+        position: relative;
+        left: 50%;
+        margin-bottom: 5%;
+        transform: translateX(-50%);
+    }
+
+    .button-galery:hover i{
+        color: var(--color--green);
+    }
+
+    .button-galery:hover{
+        transform: scale(.95);
+        background-color: transparent;
+        border: 1px solid var(--color--green);
+        color: var(--color--green);
+    }
+
+    .button-galery i{
+        font-size: 14px;
+        color: var(--color--white);
+        opacity: 1;
+        margin-top: 0;
+        animation: none;
     }
 
     .galery .img-container {
@@ -1215,6 +1253,11 @@
         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c5ab3ffb-70e1-4889-a42f-111978307600/public" loading="lazy">
     </div>
 </section>
+
+    <button onclick="window.location.href='#home'" class="button-galery">
+        Entrar em contato
+        <i class="bi bi-arrow-right"></i>
+    </button>
 
     <script>
         const cards = document.querySelectorAll('.produtos-card > div');
