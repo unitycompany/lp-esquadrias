@@ -68,6 +68,7 @@
     .galery {
         top: 0;
         margin-bottom: 5vh !important;
+        justify-content: center;
     }
 
     .galery .img-container {

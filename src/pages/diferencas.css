@@ -237,6 +237,7 @@
         width: 100%;
         align-items: center;
         text-align: center;
+        padding-left: 0;
     }
 
     .diferencas-left div:nth-child(1) span{
