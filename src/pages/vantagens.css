@@ -1,6 +1,6 @@
 .vantagens{
     width: 100%;
-    max-width: 1140px;
+    max-width: 1280px;
     transform: translateX(-50%);
     background-color: #eeeeee50;
     left: 50%;
@@ -66,6 +66,7 @@
 
 .vantagens-card div{
     background-color: var(--color--green);
+    border: 3px solid #ffffff4d;
     padding: 25px 15px;
     display: flex;
     flex-direction: column;
@@ -86,27 +87,6 @@
     font-weight: 100;
     opacity: .8;
     font-size: 14px;
-}
-
-.vantagens-bottom button{
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 15px;
-    background-color: var(--color--green);
-    cursor: pointer;
-    color: var(--color--white);
-    transition: all .2s ease;
-}
-
-.vantagens-bottom button:hover{
-    transform: scale(.95);
-    background-color: transparent;
-    border: 1px solid var(--color--green);
-    color: var(--color--green);
 }
 
 @media (max-width: 768px){

@@ -1,20 +1,21 @@
 .diferencas{
     width: 100%;
-    max-width: 1140px;
+    max-width: 1280px;
     transform: translateX(-50%);
     left: 50%;
     top: 0;
     position: relative;
     height: auto;
-    padding: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    padding-top: 5%;
 }
 
 .diferencas-left{
     width: 50%;
+    padding-left: 5%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -131,27 +132,6 @@
     width: 100px;
 }
 
-.diferencas-left div:nth-child(4) button{
-    border: none;
-    padding: 12px 20px;
-    border-radius: 0 25px 25px 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 15px;
-    background-color: var(--color--green);
-    cursor: pointer;
-    color: var(--color--white);
-    transition: all .2s ease;
-}
-
-.diferencas-left div:nth-child(4) button:hover{
-    transform: scale(.95);
-    background-color: transparent;
-    border: 1px solid var(--color--green);
-    color: var(--color--green);
-}
-
 .diferencas-left div:nth-child(5){
     font-size: 30px;
     color: var(--color--green);
@@ -168,6 +148,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 5%;
 }
 
 .diferencas-right .image-top{
@@ -180,7 +161,7 @@
     background-color: var(--color--green);
     position: relative;
     overflow: hidden;
-    transition: all .5s ease;
+    transition: all .5s ease!important;
 }
 
 .diferencas-right .image-top::before{
@@ -198,7 +179,7 @@
 }
 
 .diferencas-right .image-top:hover{
-    transform: scale(1.02);
+    transform: scale(1.02)!important;
     background-color: var(--color--white);
 }
 
@@ -217,7 +198,7 @@
     justify-content: center;
     position: relative;
     background-color: var(--color--red);
-    transition: all .5s ease;
+    transition: all .5s ease!important;
 }
 
 .diferencas-right .image-bottom::before{
@@ -235,7 +216,7 @@
 }
 
 .diferencas-right .image-bottom:hover{
-    transform: scale(1.02);
+    transform: scale(1.02)!important;
     background-color: var(--color--white);
 }
 
