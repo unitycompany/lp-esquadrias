@@ -1,0 +1,220 @@
+
+.home{
+    width: 100%;
+    max-width: 1140px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    position: relative;
+    height: auto;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.home-left{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.home-left div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.home-left h1{
+    
+    font-size: 34px;
+    font-weight: 100;
+    color: var(--color--black);
+    line-height: 110%;
+    width: 90%;
+}
+
+.home-left img {
+    width: 300px;
+    margin-bottom: -20px;
+}
+
+.home-left h1 b{
+    font-weight: 300;
+    color: var(--color--green);
+}
+
+.home-left p {
+    
+    font-size: 16px;
+    opacity: .6;
+    color: var(--color--black);
+    width: 80%;
+    line-height: 110%;
+    font-weight: 100;
+    margin-top: -20px;
+}
+
+.home-left h6 {
+    color: var(--color--green);
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.contactForm {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.contactForm input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #00000040;
+}
+
+.contactForm input::placeholder{
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .6;
+}
+
+.contactForm input:focus{
+    border: none;
+    border-bottom: 2px solid green;
+}
+
+.contactForm button{
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--color--green);
+    cursor: pointer;
+    color: var(--color--white);
+    transition: all .2s ease;
+}
+
+.contactForm button:hover{
+    transform: scale(.95);
+    background-color: transparent;
+    border: 1px solid var(--color--green);
+    color: var(--color--green);
+}
+
+.home-left span {
+    font-size: 10px;
+    opacity: .4;
+    width: 70%;
+    color: var(--color--black);
+}
+
+.home-left div:nth-child(2) i{
+    font-size: 30px;
+    opacity: .4;
+    color: var(--color--green);
+    padding-top: 30px;
+    animation: AnimationSeta 5s linear infinite alternate-reverse;
+}
+
+.home-right{
+    position: relative;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: -1;
+}
+
+.home-right img{
+    width: 110%;
+    height: 100%;
+    object-fit: contain;    
+    transition: all 1s ease-in-out;
+}
+
+.home-right img:hover{
+    transform: skew(-1deg);
+}
+
+@media (max-width: 768px){
+    .home{
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 10% 2.5%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .home-left{
+        width: 100%;
+        position: relative;
+        margin-top: -10%;
+        z-index: 1;
+        align-items: center;
+    }
+
+    .home-left div{
+        align-items: center;
+    }
+
+    .home-left h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .home-left p{
+        font-size: 16px;
+        text-align: center;
+        opacity: .4!important;
+    }
+
+    .contactForm{
+        align-items: center;
+        width: 100%;
+    }
+
+    .contactForm input{
+        width: 100%;
+    }
+
+    .contactForm button{
+        border-radius: 20px;
+    }
+
+    .home-left span{
+        text-align: center;
+        width: 100%;
+        opacity: .4;
+    }
+
+    .home-right{
+        z-index: -1;
+        top: -2%;
+        width: 100%;
+    }
+    
+
+    .home-left span{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

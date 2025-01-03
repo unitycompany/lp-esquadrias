@@ -1,0 +1,57 @@
+:root{
+    --color--black: #000000;
+    --color--green: #2c6d14;
+    --color--white: #ffffff;
+    --color--background: #fbfbfb;
+    --color--red: #ca0101;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    margin-right: 2px!important;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color--green);
+    margin-right: 2px!important;
+    border-radius: 5px;
+}
+
+@keyframes AnimationSeta {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+button{
+    padding: 10px 20px 10px 30px;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--color--green);
+    color: var(--color--white);
+    border-radius: 20px 0 20px 0;
+    border: none;
+}

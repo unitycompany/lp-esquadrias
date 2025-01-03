@@ -1,0 +1,145 @@
+.sobre{
+    width: 100%;
+    max-width: 1140px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    position: relative;
+    height: auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.sobre-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre-top span{
+    font-size: 18px;
+    font-weight: 100;
+    color: var(--color--green);
+}
+
+.sobre-top h1{
+    font-size: 32px;
+    font-weight: 100;
+    color: var(--color--black);
+}
+
+.sobre-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+
+.sobre-card{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+    background-color: #00000005;
+    padding: 20px;
+    transition: all .5s ease;
+}
+
+.sobre-card:hover{
+    transform: scale(1.1);
+    background-color: #00000010;
+}
+
+.sobre-card div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sobre-card div:nth-child(1) img{
+    width: 50px;   
+}
+
+.sobre-card div:nth-child(1) h2{
+    font-weight: 100;
+    color: var(--color--green);
+    font-size: 18px;
+}
+
+.sobre-card div:nth-child(2) p{
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--color--black);
+    opacity: .6;
+    height: 50%;
+}
+
+.sobre-card div:nth-child(3) button{
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--color--green);
+    cursor: pointer;
+    color: var(--color--white);
+    transition: all .2s ease;
+}
+
+.sobre-card div:nth-child(3) button:hover{
+    transform: scale(.95);
+    background-color: transparent;
+    border: 1px solid var(--color--green);
+    color: var(--color--green);
+}
+
+.sobre-bottom{
+    font-size: 32px;
+    color: var(--color--green);
+    opacity: 0;
+    animation: AnimationSeta 5s linear infinite alternate-reverse;
+}
+
+@media(max-width: 768px){
+    .sobre{
+        padding: 10% 2.5%;
+        height: auto;
+    }
+
+    .sobre-top span{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sobre-top h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .sobre-center{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .sobre-card{
+        width: 100%;
+    }
+
+    .sobre-card div:nth-child(1) img{
+        width: 30px;
+    }
+}

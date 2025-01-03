@@ -1,0 +1,141 @@
+.vantagens{
+    width: 100%;
+    max-width: 1140px;
+    transform: translateX(-50%);
+    background-color: #eeeeee50;
+    left: 50%;
+    top: 0;
+    position: relative;
+    height: auto;
+    padding: 5% 5%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.vantagens-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vantagens-top img {
+    width: 140px;
+    margin-top: 45px;
+}
+
+.vantagens-top span{
+    font-size: 18px;
+    font-weight: 100;
+    color: var(--color--green);
+}
+
+.vantagens-top h1{
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 100%;
+    color: var(--color--black);
+}
+
+.vantagens-center{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.vantagens-card{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.vantagens-card span{
+    font-size: 50px;
+    color: var(--color--green);
+    font-weight: 100;
+}
+
+.vantagens-card div{
+    background-color: var(--color--green);
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+}
+
+.vantagens-card div h1{
+    font-weight: 100;
+    color: var(--color--white);
+    font-size: 20px;
+}
+
+.vantagens-card div p{
+    color: var(--color--white);
+    font-weight: 100;
+    opacity: .8;
+    font-size: 14px;
+}
+
+.vantagens-bottom button{
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--color--green);
+    cursor: pointer;
+    color: var(--color--white);
+    transition: all .2s ease;
+}
+
+.vantagens-bottom button:hover{
+    transform: scale(.95);
+    background-color: transparent;
+    border: 1px solid var(--color--green);
+    color: var(--color--green);
+}
+
+@media (max-width: 768px){
+    .vantagens{
+        flex-direction: column;
+        padding: 10% 2.5%;
+        height: auto;
+    }
+
+    .vantagens-top span{
+        font-size: 14px;
+    }
+
+    .vantagens-top h1{
+        font-size: 24px;
+    }
+
+    .vantagens-center{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .vantagens-card{
+        width: 100%;
+        align-items: center;
+    }
+
+    .vantagens-card div{
+        align-items: center;
+        text-align: center;
+    }
+}
