@@ -159,7 +159,7 @@
     <section class="produtos" id="produtos">
         <div class="produtos-left">
             <span data-aos="fade-up-right" data-aos-delay="50">Conheça</span>
-            <h1 data-aos="fade-up-right" data-aos-delay="150">Toda a Linha PVC Ecoframe</h1>
+            <h1 data-aos="fade-up-right" data-aos-delay="150">Toda a Linha de Esquadrias PVC Ecoframe</h1>
             <!-- <p data-aos="fade-up-right" data-aos-delay="200">As esquadrias de PVC oferecem qualidade superior com durabilidade incomparável, excelente isolamento térmico e acústico, eficiência energética e design moderno. Além de resistirem à corrosão e intempéries, são sustentáveis, recicláveis e demandam pouca manutenção, tornando-se a escolha ideal para quem busca conforto, economia e estética.
             </p> -->
             <!-- <button onclick="window.location.href='#contactForm'">
@@ -350,6 +350,155 @@
 
 <!-- Fim da seção Sobre -->
 
+
+    <section class="form" id="form">
+    <div class="form-background"></div>
+
+    <div class="form-container">
+        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/73dde0aa-222e-479a-6bcc-0b9cddae2500/public" data-aos="fade-up" data-aos-delay="100" >
+        <form class="contactForm" id="contactForm" data-aos="fade-up" data-aos-delay="100" >
+            <h1 data-aos="fade-up-right" data-aos-delay="300" >Entre em contato</h1>
+
+            <label data-aos="fade-up" data-aos-delay="300" >
+                Nome
+                <input type="text" id="name" placeholder="Robson Barbosa" required>
+            </label>
+
+            <label data-aos="fade-up" data-aos-delay="300" >
+                E-mail
+                <input type="email" id="email" placeholder="robsonbarbosa@gmail.com" required>
+            </label>
+
+            <label data-aos="fade-up" data-aos-delay="300" >
+                WhatsApp
+                <input type="tel" id="tel" placeholder="24987654321" required>
+            </label>
+
+            <button type="submit" data-aos="fade-up" data-aos-delay="300" >Enviar formulário</button>
+
+            <span data-aos="fade-up" data-aos-delay="300" >
+                *Todas as informações são enviadas apenas para o meio de contato, ao enviar você concorda com isso!
+            </span>
+        </form>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const formElement = document.querySelector('#contactForm');
+        
+          formElement.addEventListener('submit', function (event) {
+            event.preventDefault();
+        
+            const name = formElement.querySelector('#name').value.trim();
+            const email = formElement.querySelector('#email').value.trim();
+            const whatsapp = formElement.querySelector('#tel').value.trim();
+        
+            // Validação básica
+            if (!name || !email || !whatsapp) {
+              alert("Por favor, preencha todos os campos corretamente.");
+              return;
+            }
+        
+            // Exibir overlay de carregamento (caso queira colocar)
+            displayLoadingOverlay(true);
+        
+            // Captura de UTM
+            const utms = getUTMs();
+            const utmSource = utms.utm_source || 'orgânico';
+            const utmMedium = utms.utm_medium || '';
+            const utmCampaign = utms.utm_campaign || '';
+            const utmContent = utms.utm_content || '';
+            const utmTerm = utms.utm_term || '';
+            const pageReferrer = window.location.href || 'URL não encontrada';
+        
+            // Montagem do payload
+            const payload = {
+              rules: {
+                update: "false",
+                filter_status_update: "open",
+                equal_pipeline: "true",
+                status: "open",
+                validate_cpf: "false",
+              },
+              leads: [
+                {
+                  id: "form-sistemas-steel-frame-asr",
+                  user: name,
+                  email: email,
+                  name: name,
+                  personal_phone: whatsapp,
+                  mobile_phone: whatsapp,
+                  last_conversion: {
+                    source: utmSource
+                  },
+                  custom_fields: {
+                    uniqueId: generateUniqueId(),
+                    utm_source: utmSource,
+                    utm_medium: utmMedium,
+                    utm_campaign: utmCampaign,
+                    utm_content: utmContent,
+                    utm_term: utmTerm,
+                    page_referrer: pageReferrer
+                  }
+                }
+              ]
+            };
+        
+            // Envio via fetch
+            fetch('https://app.pipe.run/webservice/integradorJson?hash=1e28b707-3c02-4393-bb9d-d3826b060dcd', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+              displayLoadingOverlay(false);
+              alert('Formulário enviado com sucesso!');
+              formElement.reset();
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+              displayLoadingOverlay(false);
+              alert('Houve um erro ao enviar o formulário.');
+            });
+          });
+        
+          function generateUniqueId() {
+            // Exemplo simples de ID único
+            return new Date().getTime().toString();
+          }
+        
+          function getUTMs() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+              utm_source: urlParams.get('utm_source'),
+              utm_medium: urlParams.get('utm_medium'),
+              utm_campaign: urlParams.get('utm_campaign'),
+              utm_content: urlParams.get('utm_content'),
+              utm_term: urlParams.get('utm_term'),
+            };
+          }
+        
+          function displayLoadingOverlay(show) {
+            // Insira aqui a lógica para exibir/ocultar o overlay
+            if (show) {
+              console.log("Mostrando overlay de carregamento...");
+              // Exemplo: document.querySelector('#loadingOverlay').style.display = 'block';
+            } else {
+              console.log("Removendo overlay de carregamento...");
+              // Exemplo: document.querySelector('#loadingOverlay').style.display = 'none';
+            }
+          }
+        });
+    </script>
+    
+    
+    </section>
+
     <section class="faq" id="faq">
     <div class="faq-header">
         <span class="faq-subtitle" data-aos="fade-up-right" data-aos-delay="50">Não fique na dúvida!</span>
@@ -468,162 +617,14 @@
             </svg>
           </button>
     </div>
-    </section>
-
-    <section class="form" id="form">
-        <div class="form-background"></div>
-    
-        <div class="form-container">
-            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/73dde0aa-222e-479a-6bcc-0b9cddae2500/public" data-aos="fade-up" data-aos-delay="100" >
-            <form class="contactForm" id="contactForm" data-aos="fade-up" data-aos-delay="100" >
-                <h1 data-aos="fade-up-right" data-aos-delay="300" >Entre em contato</h1>
-    
-                <label data-aos="fade-up" data-aos-delay="300" >
-                    Nome
-                    <input type="text" id="name" placeholder="Robson Barbosa" required>
-                </label>
-    
-                <label data-aos="fade-up" data-aos-delay="300" >
-                    E-mail
-                    <input type="email" id="email" placeholder="robsonbarbosa@gmail.com" required>
-                </label>
-    
-                <label data-aos="fade-up" data-aos-delay="300" >
-                    WhatsApp
-                    <input type="tel" id="tel" placeholder="24987654321" required>
-                </label>
-    
-                <button type="submit" data-aos="fade-up" data-aos-delay="300" >Enviar formulário</button>
-    
-                <span data-aos="fade-up" data-aos-delay="300" >
-                    *Todas as informações são enviadas apenas para o meio de contato, ao enviar você concorda com isso!
-                </span>
-            </form>
-    
-            <div class="form-footer" data-aos="fade-up" data-aos-delay="200" > 
-                <p>Todos os direitos reservados | &copy desde 2025</p>
-                <div>
-                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ae80f2d1-7b1c-4911-032b-bc9648f69100/public">
-                </div>
-                <p>Desenvolvido por <a href="https://alephsramos.com.br" target="_blank"> <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735845648/Ativo_4_rg3wac.svg"> </a></p>
-            </div>
+    <div class="form-footer" data-aos="fade-up" data-aos-delay="200" > 
+        <p>Todos os direitos reservados | &copy desde 2025</p>
+        <div>
+            <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ae80f2d1-7b1c-4911-032b-bc9648f69100/public">
         </div>
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const formElement = document.querySelector('#contactForm');
-            
-              formElement.addEventListener('submit', function (event) {
-                event.preventDefault();
-            
-                const name = formElement.querySelector('#name').value.trim();
-                const email = formElement.querySelector('#email').value.trim();
-                const whatsapp = formElement.querySelector('#tel').value.trim();
-            
-                // Validação básica
-                if (!name || !email || !whatsapp) {
-                  alert("Por favor, preencha todos os campos corretamente.");
-                  return;
-                }
-            
-                // Exibir overlay de carregamento (caso queira colocar)
-                displayLoadingOverlay(true);
-            
-                // Captura de UTM
-                const utms = getUTMs();
-                const utmSource = utms.utm_source || 'orgânico';
-                const utmMedium = utms.utm_medium || '';
-                const utmCampaign = utms.utm_campaign || '';
-                const utmContent = utms.utm_content || '';
-                const utmTerm = utms.utm_term || '';
-                const pageReferrer = window.location.href || 'URL não encontrada';
-            
-                // Montagem do payload
-                const payload = {
-                  rules: {
-                    update: "false",
-                    filter_status_update: "open",
-                    equal_pipeline: "true",
-                    status: "open",
-                    validate_cpf: "false",
-                  },
-                  leads: [
-                    {
-                      id: "form-sistemas-steel-frame-asr",
-                      user: name,
-                      email: email,
-                      name: name,
-                      personal_phone: whatsapp,
-                      mobile_phone: whatsapp,
-                      last_conversion: {
-                        source: utmSource
-                      },
-                      custom_fields: {
-                        uniqueId: generateUniqueId(),
-                        utm_source: utmSource,
-                        utm_medium: utmMedium,
-                        utm_campaign: utmCampaign,
-                        utm_content: utmContent,
-                        utm_term: utmTerm,
-                        page_referrer: pageReferrer
-                      }
-                    }
-                  ]
-                };
-            
-                // Envio via fetch
-                fetch('https://app.pipe.run/webservice/integradorJson?hash=1e28b707-3c02-4393-bb9d-d3826b060dcd', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(payload)
-                })
-                .then(response => response.json())
-                .then(data => {
-                  console.log('Success:', data);
-                  displayLoadingOverlay(false);
-                  alert('Formulário enviado com sucesso!');
-                  formElement.reset();
-                })
-                .catch((error) => {
-                  console.error('Error:', error);
-                  displayLoadingOverlay(false);
-                  alert('Houve um erro ao enviar o formulário.');
-                });
-              });
-            
-              function generateUniqueId() {
-                // Exemplo simples de ID único
-                return new Date().getTime().toString();
-              }
-            
-              function getUTMs() {
-                const urlParams = new URLSearchParams(window.location.search);
-                return {
-                  utm_source: urlParams.get('utm_source'),
-                  utm_medium: urlParams.get('utm_medium'),
-                  utm_campaign: urlParams.get('utm_campaign'),
-                  utm_content: urlParams.get('utm_content'),
-                  utm_term: urlParams.get('utm_term'),
-                };
-              }
-            
-              function displayLoadingOverlay(show) {
-                // Insira aqui a lógica para exibir/ocultar o overlay
-                if (show) {
-                  console.log("Mostrando overlay de carregamento...");
-                  // Exemplo: document.querySelector('#loadingOverlay').style.display = 'block';
-                } else {
-                  console.log("Removendo overlay de carregamento...");
-                  // Exemplo: document.querySelector('#loadingOverlay').style.display = 'none';
-                }
-              }
-            });
-        </script>
-        
-        
-        </section>
+        <p>Desenvolvido por <a href="https://alephsramos.com.br" target="_blank"> <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735845648/Ativo_4_rg3wac.svg"> </a></p>
+    </div>
+    </section>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
