@@ -649,11 +649,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-    AOS.init({
-      // você pode configurar globalmente alguns parâmetros aqui, caso deseje
-      duration: 1000, // duração padrão da animação
-      once: true       // anima apenas uma vez
-    });
+     // Detecta se o dispositivo é mobile (ou tablet)
+     const isMobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+        
+        // Se for mobile/tablet, `once` será true (só anima uma vez)
+        // Se for desktop, `once` continua false (anima sempre que o elemento aparece)
+        AOS.init({
+          offset: 0,
+          duration: 1000,
+          throttleDelay: 99,
+          once: isMobile ? true : false,
+          // Retire ou comente a linha "disable: mobile" se ela existia
+        });
   </script>
 
 <!-- Fim da seção FAQ -->
