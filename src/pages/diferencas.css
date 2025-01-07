@@ -25,7 +25,7 @@
 }
 
 .diferencas-left div:nth-child(1) span{
-    font-size: 16px;
+    font-size: 20px;
     color: var(--color--green);
     font-weight: 100;
 }
